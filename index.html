@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bryan's 3D Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>Bryan Asiedu</h1>
+            <ul>
+                <li><a href="#work">Work</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="hero">
+        <div class="hero-content">
+            <h2>3D Artist & Developer</h2>
+            <p>Creating interactive 3D experiences and digital art</p>
+        </div>
+    </section>
+
+    <section id="work">
+        <h2>Featured Work</h2>
+        
+        <!-- Model Showcase -->
+        <div class="project-card">
+            <div class="model-viewer-container">
+                <canvas id="modelCanvas"></canvas>
+                <div class="viewer-controls">
+                    <p>Click and drag to rotate • Scroll to zoom</p>
+                </div>
+            </div>
+            
+            <div class="project-info">
+                <h3>Project Title</h3>
+                <p class="tech-stack">Maya • ZBrush • Three.js</p>
+                <p class="description">
+                    Brief description of your model - what it is, what inspired it, 
+                    and any technical challenges you solved during creation.
+                </p>
+                <div class="specs">
+                    <span><strong>Poly Count:</strong> X,XXX tris</span>
+                    <span><strong>Textures:</strong> 2K PBR</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Additional static images section -->
+        <div class="gallery">
+            <h3>Process & Details</h3>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="images/wireframe.png" alt="Wireframe view">
+                    <p>Topology</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/clay.png" alt="Clay render">
+                    <p>Clay Render</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/detail.png" alt="Detail shot">
+                    <p>Detail</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Work in Progress Section -->
+        <div class="wip-section">
+            <h3>In Development</h3>
+            <div class="wip-grid">
+                <div class="wip-card">
+                    <h4>Djembe: 3D Interactive Music Platform</h4>
+                    <p>Web-based 3D application for music education using Three.js and WebGL. 
+                       Combines traditional Ghanaian musical instruments with interactive 3D experiences.</p>
+                    <p class="tech-stack">Three.js • WebGL • 3D Modeling</p>
+                </div>
+                <!-- Add more WIP projects as needed -->
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>About</h2>
+        <div class="about-content">
+            <div class="bio">
+                <p>
+                    Final-year Computer Science student at Ashesi University, Ghana, 
+                    specializing in 3D modeling and interactive web experiences. 
+                    Passionate about merging technology with cultural preservation and education.
+                </p>
+                <p>
+                    Graduating April 2025 and actively seeking opportunities in 3D modeling 
+                    and digital art.
+                </p>
+            </div>
+            
+            <div class="skills">
+                <h3>Skills & Tools</h3>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h4>3D Software</h4>
+                        <ul>
+                            <li>Autodesk Maya</li>
+                            <li>ZBrush</li>
+                            <li>Blender</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Web & Programming</h4>
+                        <ul>
+                            <li>Three.js / WebGL</li>
+                            <li>JavaScript</li>
+                            <li>HTML/CSS</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Additional</h4>
+                        <ul>
+                            <li>PBR Texturing</li>
+                            <li>UV Mapping</li>
+                            <li>Rigging & Animation</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Get In Touch</h2>
+        <div class="contact-links">
+            <a href="mailto:your.email@example.com" class="contact-btn">Email</a>
+            <a href="https://github.com/yourusername" target="_blank" class="contact-btn">GitHub</a>
+            <a href="https://linkedin.com/in/yourprofile" target="_blank" class="contact-btn">LinkedIn</a>
+            <a href="https://artstation.com/yourprofile" target="_blank" class="contact-btn">ArtStation</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Bryan Asiedu. All rights reserved.</p>
+    </footer>
+
+    <!-- Three.js from CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <!-- OrbitControls -->
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+    <!-- GLTFLoader -->
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+    <!-- Your custom script -->
+    <script src="viewer.js"></script>
+</body>
+</html>
