@@ -25,8 +25,8 @@ renderer.toneMappingExposure = 1;
 scene.background = new THREE.Color(0x1e3c72);
 
 // Camera position
-camera.position.z = 5;
-camera.position.y = 1;
+camera.position.z = 7;
+camera.position.y = 2;
 
 // Lighting Setup
 const ambientLight = new THREE.AmbientLight(0xffffff, 0.6);
@@ -49,8 +49,8 @@ scene.add(rimLight);
 const controls = new THREE.OrbitControls(camera, renderer.domElement);
 controls.enableDamping = true;
 controls.dampingFactor = 0.05;
-controls.minDistance = 2;
-controls.maxDistance = 10;
+controls.minDistance = 3;
+controls.maxDistance = 15;
 controls.maxPolarAngle = Math.PI / 1.5;
 
 // Optional: Add a grid helper for reference (can remove later)
@@ -75,8 +75,11 @@ loader.load(
         // Scale model if needed (adjust based on your model size)
         const size = box.getSize(new THREE.Vector3());
         const maxDim = Math.max(size.x, size.y, size.z);
-        const scale = 3 / maxDim;
+        const scale = 5 / maxDim; // Increased from 3 to 5 for larger display
         model.scale.multiplyScalar(scale);
+
+        // Position adjustment - move model slightly up for better framing
+        model.position.y += 0.5;
         
         scene.add(model);
         
