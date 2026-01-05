@@ -3,7 +3,8 @@
     "allow": [
       "Bash(git mv:*)",
       "Bash(move:*)",
-      "Bash(mv:*)"
+      "Bash(mv:*)",
+      "Bash(git commit:*)"
     ]
   }
 }

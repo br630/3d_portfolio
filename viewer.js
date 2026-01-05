@@ -63,7 +63,7 @@ const loader = new THREE.GLTFLoader();
 let model;
 
 loader.load(
-    'models/your-model.glb', // Change this to your model path
+    'models/Model_1.glb',
     function (gltf) {
         model = gltf.scene;
         
